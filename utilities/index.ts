@@ -7,7 +7,7 @@ import { CarProps,filterProps } from "@/types";
       'X-RapidAPI-Key': 'cef2ad7549msh5f48ecbd728b034p1b54afjsn817580d52147',
       'X-RapidAPI-Host': 'cars-by-api-ninjas.p.rapidapi.com'
     }
-    const response = await fetch(`https://cars-by-api-ninjas.p.rapidapi.com/v1/cars?model=corolla`,
+    const response = await fetch(`https://cars-by-api-ninjas.p.rapidapi.com/v1/cars?model=carrera`,
     {headers:headers}
     )
 
@@ -30,10 +30,10 @@ import { CarProps,filterProps } from "@/types";
     return rentalRatePerday.toFixed(0)
   };
 
-  export const generateCarImageUrl = (Car:CarProps, angle?:string) => {
+  export const generateCarImageUrl = (car:CarProps, angle?:string) => {
     const url = new URL("https://cdn.imagin.studio/getimage");
 
-      const {make, year , model} = Car;
+      const {make, year , model} = car;
       
         url.searchParams.append("customer", "hrjavascript-mastery")
        url.searchParams.append("make", make )
