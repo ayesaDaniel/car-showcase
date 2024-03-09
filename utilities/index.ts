@@ -7,11 +7,12 @@ import { CarProps,filterProps } from "@/types";
       'X-RapidAPI-Key': 'cef2ad7549msh5f48ecbd728b034p1b54afjsn817580d52147',
       'X-RapidAPI-Host': 'cars-by-api-ninjas.p.rapidapi.com'
     }
-    const response = await fetch(`https://cars-by-api-ninjas.p.rapidapi.com/v1/cars?model=q3`,
+    const response = await fetch(`https://cars-by-api-ninjas.p.rapidapi.com/v1/cars?model=corolla`,
     {headers:headers}
     )
 
     const result = await response.json()
+    console.log(result)
   return result;
   }
 
@@ -41,7 +42,7 @@ import { CarProps,filterProps } from "@/types";
         url.searchParams.append("zoomType", "fullscreen")
         url.searchParams.append("modelYear", `${year}`)
         url.searchParams.append("angle", `${angle}`)
-
+console.log(url)
         return `${url}`
   }
 
