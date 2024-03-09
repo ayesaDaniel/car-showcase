@@ -20,7 +20,7 @@ export default function CustomFilter({ title, options }: customFilterProps) {
   };
 
   return (
-    <div className='w-fit'>
+    <div className='w-fit dark__lighten'>
       <Listbox
         value={selected}
         onChange={(e) => {
@@ -30,7 +30,7 @@ export default function CustomFilter({ title, options }: customFilterProps) {
       >
         <div className='relative w-fit z-10'>
           {/* Button for the listbox */}
-          <Listbox.Button className='custom-filter__btn'>
+          <Listbox.Button className='custom-filter__btn dark__lighten'>
             <span className='block truncate'>{selected.title}</span>
             <Image src='/chevron-up-down.svg' width={20} height={20} className='ml-4 object-contain' alt='chevron_up-down' />
           </Listbox.Button>

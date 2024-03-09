@@ -2,18 +2,18 @@
 
 import { useState } from "react";
 import Image from "next/image";
-
 import { calculateCarRent, generateCarImageUrl } from "@/utilities";
 import { CarProps } from "@/types";
 import CustomButton from "./CustomButton";
 import CarDetails from "./CarDetails";
+import Skeleton from "react-loading-skeleton";
 
 interface CarCardProps {
-  car: CarProps;
+  Car: CarProps;
 }
 
-const CarCard = ({ car }: CarCardProps) => {
-  const { city_mpg, year, make, model, transmission, drive } = car;
+const CarCard = ({ Car }: CarCardProps) => {
+  const { city_mpg, year, make, model, transmission, drive } = Car;
 
   const [isOpen, setIsOpen] = useState(false);
 
@@ -34,7 +34,7 @@ const CarCard = ({ car }: CarCardProps) => {
       </p>
 
       <div className='relative w-full h-40 my-3 object-contain'>
-        <Image src={generateCarImageUrl(car)} alt='car model' fill priority className='object-contain' />
+        <Image src={generateCarImageUrl(Car) } alt='car model' fill priority className='object-contain' />
       </div>
 
       <div className='relative flex w-full mt-2'>
@@ -66,7 +66,7 @@ const CarCard = ({ car }: CarCardProps) => {
         </div>
       </div>
 
-      <CarDetails isOpen={isOpen} closeModal={() => setIsOpen(false)} car={car} />
+      <CarDetails isOpen={isOpen} closeModal={() => setIsOpen(false)} car={Car} />
     </div>
   );
 };

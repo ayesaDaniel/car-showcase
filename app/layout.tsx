@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import "./globals.css";
+import Provider from "@/components/provider";
+import { SkeletonTheme } from "react-loading-skeleton";
+
 
 
 
@@ -16,12 +19,23 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
+
     <html lang="en">
-      <body className="relative">
+    
+      <body className="dark:bg-gray-900 bg-white">
+        
+      <SkeletonTheme baseColor="#313131" highlightColor="#525252">
+      <Provider>
         <Navbar/>
+        <main>
         {children}
+        </main>
         <Footer />
+        </Provider>
+      </SkeletonTheme>
         </body>
+      
     </html>
+   
   );
 }

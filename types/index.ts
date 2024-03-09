@@ -41,6 +41,7 @@ export interface filterProps{
     fuel: string ;
     limit: number;
     model:string ;
+    className?:string;
 }
 export interface optionProps {
     title:string;
@@ -49,6 +50,7 @@ export interface optionProps {
 export interface customFilterProps{
     title:string;
     options:optionProps[];
+    className?:string;
 }
 
 

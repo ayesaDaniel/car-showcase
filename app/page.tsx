@@ -19,17 +19,17 @@ export default async function Home({ searchParams }: HomeProps) {
     <main className='overflow-hidden'>
       <Hero />
 
-      <div className='mt-12 padding-x padding-y max-width' id='discover'>
+      <div className='mt-12 padding-x padding-y max-width dark:bg-gray-900' id='discover'>
         <div className='home__text-container'>
-          <h1 className='text-4xl font-extrabold'>Car Catalogue</h1>
-          <p>Explore out cars you might like</p>
+          <h1 className='text-4xl font-extrabold dark__text'>Car Catalogue</h1>
+          <p className="dark__text">Explore out cars you might like</p>
         </div>
 
         <div className='home__filters'>
           <SearchBar />
 
-          <div className='home__filter-container'>
-            <CustomFilter title='fuel' options={fuels} />
+          <div className='home__filter-container dark__lighten'>
+            <CustomFilter  title='fuel' options={fuels} />
             <CustomFilter title='year' options={yearsOfProduction} />
           </div>
         </div>
@@ -38,7 +38,7 @@ export default async function Home({ searchParams }: HomeProps) {
           <section>
             <div className='home__cars-wrapper'>
               {allCars?.map((car) => (
-                <CarCard car={car} />
+                <CarCard Car={car} />
               ))}
             </div>
 

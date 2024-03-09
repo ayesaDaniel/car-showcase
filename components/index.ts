@@ -7,6 +7,7 @@ import CarCard from './CarCard';
 import ShowMore from './ShowMore';
 import Footer from './Footer';
 import Navbar from './Navbar';
+import DarkModeBtn from './darkModeBtn';
 
 
 export {
@@ -19,5 +20,6 @@ export {
     SearchBar,
     CustomFilter,
     SearchManufacturer,
-    CarCard
+    CarCard,
+    DarkModeBtn 
 }
