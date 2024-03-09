@@ -65,8 +65,8 @@ className='object-contain'/>
         <div className="relative w-full h-40
             bg-pattern bg-cover bg-center rounded-lg">
             <Image 
-            //  src={generateCarImageUrl(car)} 
-            src='/hero.png'
+             src={generateCarImageUrl(car, '29')} 
+            // src='/hero.png'
             alt='car-model' 
              fill priority
               className='object-contain'/>            
