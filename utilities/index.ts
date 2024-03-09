@@ -7,7 +7,7 @@ import { CarProps,filterProps } from "@/types";
       'X-RapidAPI-Key': 'cef2ad7549msh5f48ecbd728b034p1b54afjsn817580d52147',
       'X-RapidAPI-Host': 'cars-by-api-ninjas.p.rapidapi.com'
     }
-    const response = await fetch(`https://cars-by-api-ninjas.p.rapidapi.com/v1/cars?model=corolla`,
+    const response = await fetch(`https://cars-by-api-ninjas.p.rapidapi.com/v1/cars?model=q3`,
     {headers:headers}
     )
 
